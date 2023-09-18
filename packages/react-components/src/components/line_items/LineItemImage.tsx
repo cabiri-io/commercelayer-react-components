@@ -17,7 +17,10 @@ type Props = {
   placeholder?: {
     [K in TLineItem]?: string
   }
-} & Omit<JSX.IntrinsicElements['img'], 'src' | 'srcSet' | 'placeholder'>
+} & Omit<
+  JSX.IntrinsicElements['img'],
+  'children' | 'src' | 'srcSet' | 'placeholder'
+>
 
 export function LineItemImage(props: Props): JSX.Element | null {
   const { placeholder, children, ...p } = props
